@@ -25,27 +25,33 @@ async function fetchPokemonData(pokemonName) {
 }
 
 function displayPokemonData(pokemonData) {
-	// Clear the display
-	pokemonDisplay.innerHTML = "";
+    // Clear the display
+    pokemonDisplay.innerHTML = "";
 
-	// Create elements for the Pokémon's name, image, etc.
-	const pokemonName = document.createElement("h2");
-	pokemonName.textContent = pokemonData.name;
-	const pokemonImage = document.createElement("img");
-	pokemonImage.src = pokemonData.sprites.front_default;
-	pokemonImage.alt = `Image of ${pokemonData.name}`;
-	pokemonImage.classList.add("pokemon-image");
+    // Create elements for the Pokémon's name, image, etc.
+    const pokemonName = document.createElement("h2");
+    pokemonName.textContent = pokemonData.name;
+    const pokemonImage = document.createElement("img");
+    pokemonImage.src = pokemonData.sprites.front_default;
+    pokemonImage.alt = `Image of ${pokemonData.name}`;
+    pokemonImage.classList.add("pokemon-image");
 
-	const abilitiesList = document.createElement("ul");
-	abilitiesList.classList.add("pokemon-abilities");
-	pokemonData.abilities.forEach((ability) => {
-		const listItem = document.createElement("li");
-		listItem.textContent = ability.ability.name;
-		abilitiesList.appendChild(listItem);
-	});
+    const abilitiesList = document.createElement("ul");
+    abilitiesList.classList.add("pokemon-abilities");
 
-	// Append the new elements to the display container
-	pokemonDisplay.appendChild(pokemonName);
-	pokemonDisplay.appendChild(pokemonImage);
-	pokemonDisplay.appendChild(abilitiesList);
+    // Add a title to the <ul> element
+    const abilitiesTitle = document.createElement("h3");
+    abilitiesTitle.textContent = "Abilities";
+    abilitiesList.appendChild(abilitiesTitle);
+
+    pokemonData.abilities.forEach((ability) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = ability.ability.name;
+        abilitiesList.appendChild(listItem);
+    });
+
+    // Append the new elements to the display container
+    pokemonDisplay.appendChild(pokemonName);
+    pokemonDisplay.appendChild(pokemonImage);
+    pokemonDisplay.appendChild(abilitiesList);
 }
