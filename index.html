@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokémon Finder</title>
+		<link rel="stylesheet" href="../styles/main.css" />
+		<link href="https://fonts.cdnfonts.com/css/pokemon-hollow" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="../Components/Card.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">PokéCard Master</h1>
+			<nav class="nav">
+				<input type="text" id="pokemonSearch" class="search-bar__input" placeholder="Enter Pokémon name..." />
+				<button id="searchButton" class="search-bar__button">Catch</button>
+			</nav>
+		</header>
+		<main>
+			<section class="search-bar"></section>
+			<section id="pokemonDisplay" class="pokemon-display">
+				<!-- Pokémon information will be displayed here -->
+			</section>
+		</main>
+		<footer class="footer-container">
+			<h3>Developed by:</h3>
+			<h4>Indy</h4>
+			<h4>Sherine</h4>
+			<h4>Erica</h4>
+		</footer>
+	</body>
+</html>

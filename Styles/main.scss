@@ -1,0 +1,133 @@
+@import "variables";
+@import "mixins";
+
+// font-family: 'Pokemon Hollow', sans-serif;
+// font-family: 'Pokemon Solid', sans-serif;
+
+// Reset some default styles
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+// Header
+.header {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: $pokemon-red;
+	padding: 2rem;
+	border-bottom: 1rem solid $pokemon-black;
+}
+.header__title {
+	margin: 0;
+	color: $pokemon-white;
+	font-size: 3.5rem;
+	font-family: "Pokemon Hollow", sans-serif;
+	letter-spacing: 0.5rem;
+}
+
+.nav {
+}
+
+.search-bar__input {
+	height: 2.5rem;
+	border-radius: 5%;
+	border: 0.3rem solid $pokemon-black;
+}
+.search-bar__button {
+	text-align: center;
+	width: 3.5rem;
+	height: 3rem;
+	background-color: $pokemon-white;
+	border: 0.2rem solid $pokemon-black;
+	border-radius: 50%;
+	font-family: "Pokemon Solid", sans-serif;
+}
+// Styles for the navigation bar
+
+// Styles for the main container
+
+.pokemon-display {
+	display: flex;
+	flex-direction: column; // Stack the image and abilities on top of each other for mobile
+	align-items: center;
+	justify-content: center;
+	border: 1rem solid $pokemon-black;
+	min-height: 45rem;
+	h2 {
+		font-family: "Pokemon Solid", sans-serif;
+		margin: 0;
+		letter-spacing: 0.6rem;
+		text-transform: capitalize;
+		font-size: 4rem;
+	}
+
+	.pokemon-image {
+		height: 20rem;
+		width: 20rem;
+		border: 0.5rem solid $pokemon-black;
+		border-radius: 10%;
+	}
+
+	.pokemon-abilities {
+		// Styles for the Pokémon abilities
+		list-style: none;
+		margin-top: 1rem; // Adds some space between the image and the abilities list on mobile
+		padding: 0;
+		font-family: "Pokemon Solid", sans-serif;
+		letter-spacing: 0.2rem;
+		text-transform: capitalize;
+		font-size: 2rem;
+	}
+
+	@include respond-to(tablet) {
+		flex-direction: row; // Place the image and abilities side by side for tablets
+		align-items: flex-start;
+
+		.pokemon-abilities {
+			margin-top: 0;
+			margin-left: 1rem; // Adds some space between the image and the abilities list on tablet
+		}
+	}
+}
+
+// Styles for the footer
+.footer-container {
+	border-top: 1rem solid $pokemon-black;
+	display: flex;
+	background: $pokemon-white;
+	color: $pokemon-red;
+	padding: 3rem;
+	justify-content: space-evenly;
+	font-family: "Pokemon Solid", sans-serif;
+	letter-spacing: 0.4rem;
+	font-size: 1.5rem;
+	align-items: center;
+	& h3 {
+		font-family: "Pokemon Hollow", sans-serif;
+		font-size: 2rem;
+	}
+}
+
+// Typography adjustments
+
+a {
+	color: $color-secondary;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// Responsive adjustments
+@include respond-to(mobile) {
+}

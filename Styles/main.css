@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ff1a1a;
+  padding: 2rem;
+  border-bottom: 1rem solid #000000;
+}
+
+.header__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-family: "Pokemon Hollow", sans-serif;
+  letter-spacing: 0.5rem;
+}
+
+.search-bar__input {
+  height: 2.5rem;
+  border-radius: 5%;
+  border: 0.3rem solid #000000;
+}
+
+.search-bar__button {
+  text-align: center;
+  width: 3.5rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border: 0.2rem solid #000000;
+  border-radius: 50%;
+  font-family: "Pokemon Solid", sans-serif;
+}
+
+.pokemon-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1rem solid #000000;
+  min-height: 45rem;
+}
+.pokemon-display h2 {
+  font-family: "Pokemon Solid", sans-serif;
+  margin: 0;
+  letter-spacing: 0.6rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+.pokemon-display .pokemon-image {
+  height: 20rem;
+  width: 20rem;
+  border: 0.5rem solid #000000;
+  border-radius: 10%;
+}
+.pokemon-display .pokemon-abilities {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+  font-family: "Pokemon Solid", sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .pokemon-display {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .pokemon-display .pokemon-abilities {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
+.footer-container {
+  border-top: 1rem solid #000000;
+  display: flex;
+  background: #ffffff;
+  color: #ff1a1a;
+  padding: 3rem;
+  justify-content: space-evenly;
+  font-family: "Pokemon Solid", sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.footer-container h3 {
+  font-family: "Pokemon Hollow", sans-serif;
+  font-size: 2rem;
+}
+
+a {
+  color: #00a699;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
